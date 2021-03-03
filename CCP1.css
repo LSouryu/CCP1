@@ -1,21 +1,40 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: darkblue;
+    width: 100%;
+}
+
+#logo {
+    display: block;
+    width: 20%;
+    margin: 25% auto 0 auto;
+    float: left;
 }
 
 #Connection {
     display: none;
     background-color: lightblue;
     text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 5%;
+    width: 30%;
+    margin: 5% auto 0 auto;
+    float: right;
 }
 
 #Inscription {
     display: block;
     background-color: lightblue;
     text-align: center;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 5%;
+    width: 30%;
+    margin: 5% auto 0 auto;
+    float: right;
 }
