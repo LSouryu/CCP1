@@ -1,0 +1,21 @@
+body {
+    background-color: darkblue;
+}
+
+#Connection {
+    display: none;
+    background-color: lightblue;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
+
+#Inscription {
+    display: block;
+    background-color: lightblue;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
