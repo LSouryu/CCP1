@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Spookify</title>
@@ -9,8 +9,8 @@
 <body>
 
 <!-- logo -->
-<div id="Logo">
-    <img src="image/spookify-redim.png">
+<div>
+    <img alt="img no found" height="301" id="logo" src="image/spookify-redim.png" width="300">
 </div>
 
 <!-- Connection -->
@@ -19,13 +19,13 @@
     <h1> Connection </h1>
     <br>
     <form id="ConnectForm">
-        <p>Pseudo ou E-mail :
-            <input type="text" id="pseudo" class="Form-Connect" />
-        </p>
+            <label for="pseudo">Pseudo ou E-mail :</label>
+            <input class="Form-Connect" id="pseudo" type="text"/>
         <br>
-        <p>Mdp :
-            <input type="password" id="mdp" class="Form-Connect" />
-        </p>
+        <br>
+            <label for="mdp">Mdp :</label>
+            <input class="Form-Connect" id="mdp" type="password"/>
+        <br>
         <br>
             <p>
                 <a href="#" id="Ins">
@@ -50,21 +50,21 @@
     <h1> Inscription </h1>
     <br>
     <form id="RegisterForm">
-        <p>Pseudo :
+            <label for="pseudo2">Pseudo :</label>
             <input type="text" id="pseudo2" class="Form-Register" />
-        </p>
         <br>
-        <p>E-mail :
+        <br>
+            <label for="e-mail2">E-mail :</label>
             <input type="email" id="e-mail2" class="Form-Register" />
-        </p>
         <br>
-        <p>Mdp :
+        <br>
+            <label for="mdp2">Mdp :</label>
             <input type="password" id="mdp2" class="Form-Register" />
-        </p>
         <br>
-        <p>valider le Mdp :
+        <br>
+            <label for="vald-mdp2">valider le Mdp :</label>
             <input type="password" id="vald-mdp2" class="Form-Register" />
-        </p>
+        <br>
         <br>
             <p>
                 <a href="#" id="Con">
