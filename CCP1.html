@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Spookify</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="CCP1.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="CCP1.css"/>
 </head>
+
 <body>
 
 <!-- logo -->
@@ -13,82 +18,95 @@
     <img alt="img no found" height="301" id="logo" src="image/spookify-redim.png" width="300">
 </div>
 
-<!-- Connection -->
-<div id="Connection">
-    <br>
-    <h1> Connection </h1>
-    <br>
-    <form id="ConnectForm">
-            <label for="pseudo">Pseudo ou E-mail :</label>
-            <input class="Form-Connect" id="pseudo" type="text"/>
+<!-- Inscription et connection -->
+<div id="ins-con">
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" id="Con" href="#">
+                <p>Connection</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="Ins" href="#">
+                <p>Inscription</p>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Connection -->
+    <div id="Connection">
+        <br>
+        <h1> Connection </h1>
+        <br>
+        <form id="LoginForm">
+        <label for="pseudo">Pseudo ou E-mail :</label>
+        <input class="Form-Connect" id="pseudo" type="text"/>
         <br>
         <br>
-            <label for="mdp">Mdp :</label>
-            <input class="Form-Connect" id="mdp" type="password"/>
+        <label for="mdp">Mdp :</label>
+        <input class="Form-Connect" id="mdp" type="password"/>
         <br>
         <br>
-            <p>
-                <a href="#" id="Ins">
-                    Inscription ???
-                </a>
-            </p>
-        <br>
-            <p>
-                <a href="image/cookies.jpg">
-                    en vous connectant a ce site vous accepter ces règles et ces cookies
-                </a>
-            </p>
+        <p>
+            <a href="image/cookies.jpg">
+                en vous connectant a ce site vous accepter ces règles et ces cookies
+            </a>
+        </p>
         <br>
         <button class="btn btn-success Btn-Connect" type="submit">Valider</button>
-    </form>
-    <br>
-</div>
+        </form>
+        <br>
+    </div>
 
-<!-- Inscription -->
-<div id="Inscription">
-    <br>
-    <h1> Inscription </h1>
-    <br>
-    <form id="RegisterForm">
+    <!-- Inscription -->
+    <div id="Inscription">
+        <br>
+        <h1> Inscription </h1>
+        <br>
+        <form id="RegisterForm">
             <label for="pseudo2">Pseudo :</label>
-            <input type="text" id="pseudo2" class="Form-Register" />
-        <br>
-        <br>
+            <input type="text" id="pseudo2" class="Form-Register"/>
+            <br>
+            <br>
             <label for="e-mail2">E-mail :</label>
-            <input type="email" id="e-mail2" class="Form-Register" />
-        <br>
-        <br>
+            <input type="email" id="e-mail2" class="Form-Register"/>
+            <br>
+            <br>
             <label for="mdp2">Mdp :</label>
-            <input type="password" id="mdp2" class="Form-Register" />
-        <br>
-        <br>
+            <input type="password" id="mdp2" class="Form-Register"/>
+            <br>
+            <br>
             <label for="vald-mdp2">valider le Mdp :</label>
-            <input type="password" id="vald-mdp2" class="Form-Register" />
-        <br>
-        <br>
-            <p>
-                <a href="#" id="Con">
-                Inscription ???
-            </a>
-            </p>
-        <br>
+            <input type="password" id="vald-mdp2" class="Form-Register"/>
+            <br>
+            <br>
             <p>
                 <a href="image/cookies.jpg">
                     en vous inscrivant a ce site vous accepter ces règles et ces cookies
                 </a>
             </p>
+            <br>
+            <button class="btn btn-success Btn-Register" type="submit">Valider</button>
+        </form>
         <br>
-        <button class="btn btn-success Btn-Register" type="submit">Valider</button>
-    </form>
-    <br>
+    </div>
 </div>
 
 <!-- Contenue principal -->
 <div id="page-principal">
+    <div id="favorite-Playlist">
 
+    </div>
+    <div id="recherche-contenue">
+
+    </div>
+    <footer id="Play">
+
+    </footer>
 </div>
 
-
-<script src="CCP1.js"></script>
+<script src="ccp1.js"></script>
 </body>
+
 </html>

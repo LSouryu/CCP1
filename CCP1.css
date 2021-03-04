@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-    background-image: url("https://images7.alphacoders.com/312/thumb-1920-312453.jpg") ;
+    background-image: url("https://images7.alphacoders.com/312/thumb-1920-312453.jpg");
     width: 100%;
 }
 
@@ -21,8 +21,8 @@ body {
     float: left;
 }
 
-#Connection {
-    display: none;
+#ins-con {
+    display: block;
     background-color: lightblue;
     text-align: center;
     width: 30%;
@@ -30,11 +30,14 @@ body {
     float: right;
 }
 
+#Connection {
+    display: none;
+}
+
 #Inscription {
     display: block;
-    background-color: lightblue;
-    text-align: center;
-    width: 30%;
-    margin: 5% 10% 0 auto;
-    float: right;
+}
+
+#page-principal {
+    display: none;
 }
