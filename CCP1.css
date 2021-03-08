@@ -41,3 +41,26 @@ body {
 #page-principal {
     display: none;
 }
+
+#favorite-Playlist {
+    background-color: darkblue;
+    color: white;
+    margin: 0;
+    height: auto;
+    padding: 20% 15% 10% 15%;
+    float: left;
+}
+
+#recherche-contenue {
+    background-color: darkred;
+    color: white;
+    margin 0;
+    height: auto;
+    padding: 20% 35% 10% 35%;
+    float: right;
+}
+
+#play {
+    background-color: black;
+    color: white;
+}

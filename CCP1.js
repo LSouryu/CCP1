@@ -6,8 +6,6 @@ $(window).ready(() => {
     var pseudo2 = $("#pseudo2").val()
     var email2 = $("#e-mail2").val()
     var mdp = $("#mdp").val()
-    var mdp2 = $("#mdp2").val()
-    var validmdp = $("#vald-mdp2").val()
 
     if (!localStorage.getItem("users")) {
         locallogin = {
@@ -27,17 +25,21 @@ $(window).ready(() => {
 
     function displayRegist() {
         $("#Connection").hide()
+        $("#page-principal").hide()
         $("#Inscription").show()
     }
 
     function displayLog() {
         $("#Inscription").hide()
+        $("#page-principal").hide()
         $("#Connection").show()
     }
 
     function displayPage() {
         $("#Inscription").hide()
         $("#Connection").hide()
+        $("#log").hide()
+        $("#ins-con").hide()
         $("#page-principal").show()
 
     }
@@ -47,6 +49,16 @@ $(window).ready(() => {
             var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
             return v.toString(16);
         });
+    }
+
+    let f
+    for (f in sessionlogin.user) {
+        var actualuser3 = sessionlogin.user[f]
+        if (actualuser3.connect == true) {
+            displayPage()
+        }else {
+            displayRegist()
+        }
     }
 
     $("#Ins").click((event) => {
@@ -63,11 +75,11 @@ $(window).ready(() => {
 
     $("#RegisterForm").submit((event) => {
         event.preventDefault()
-        if (pseudo2 == "" || pseudo2.length < 4) {
+        if ($("#pseudo2").val() == "" || $("#pseudo2").val().length < 4) {
             alert("pseudo incomplet")
-        } else if (email2 == "") {
+        } else if ($("#e-mail2").val() == "") {
             alert("email incomplet")
-        } else if ((mdp2 == "" || mdp2.length < 8) && mdp2 == validmdp) {
+        } else if (($("#mdp").val() == "" || $("#mdp").val().length < 8) && $("#mdp").val() == $("#mdp2").val()) {
             alert("mdp incomplet")
         } else {
             alert("good days")
@@ -92,9 +104,9 @@ $(window).ready(() => {
             if (PseudoExist == false && EmailExist == false) {
                 var NewUser = {
                     id: uuidv4(),
-                    pseudo: pseudo2,
-                    email: email2,
-                    mdp: mdp2
+                    pseudo: $("#pseudo2").val(),
+                    email: $("#e-mail2").val(),
+                    mdp: $("#mdp2").val()
                 }
                 locallogin.users.push(NewUser)
                 localStorage.setItem("users", JSON.stringify(locallogin))
@@ -135,16 +147,21 @@ $(window).ready(() => {
         }
 
         if (PseudoExist2 == true && EmailExist2 == true && MdpExist2 == true) {
-            var id = id
-            var autoconnect = {
-                connect: true
-                id: id
+            let y
+            for (y in locallogin.users) {
+                var actualuser2 = locallogin.users[y]
+                var autoconnect = {
+                    connect: true,
+                    id_user: actualuser2.id,
+                    pseudo_user: actualuser2.pseudo
+                }
             }
-            locallogin.user.push(autoconnect)
-            sessionStorage.setItem("user", JSON.stringify(locallogin))
+            sessionlogin.user.push(autoconnect)
+            sessionStorage.setItem("user", JSON.stringify(sessionlogin))
         }
         $("#pseudo").val("")
         $("#mdp").val("")
+        displayPage()
     })
 
 
