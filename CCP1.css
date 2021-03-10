@@ -45,22 +45,47 @@ body {
 #favorite-Playlist {
     background-color: darkblue;
     color: white;
+    text-align: left;
     margin: 0;
     height: auto;
     padding: 20% 15% 10% 15%;
+    float: left
+}
+
+#recherche1 {
+    background-color: darkred;
+    color: white;
+    margin: 0;
+    height: auto;
+    padding: 0 20% 0 20%;
+    float: right;
+}
+
+#recherche1_1,
+#btn-recherche {
+    margin: 5% 20% 5% 20%;
     float: left;
 }
 
-#recherche-contenue {
-    background-color: darkred;
+#profile{
+    margin: 5%;
+    float: right;
+}
+
+Contenue {
+    background-color: darkcyan;
     color: white;
-    margin 0;
+    margin: 0;
     height: auto;
-    padding: 20% 35% 10% 35%;
+    padding: 0 20% 0 20%;
     float: right;
 }
 
 #play {
-    background-color: black;
+    background-color: orange;
     color: white;
+}
+
+#audio {
+    margin: 2% 40% 2% 40%;
 }
