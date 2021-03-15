@@ -164,6 +164,10 @@ $(window).ready(() => {
         displayPage()
     })
 
+
+
+    var music = "https://raw.githubusercontent.com/LSouryu/CCP1/master/jsonMusique.json"
+
     
 
 

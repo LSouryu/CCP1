@@ -72,7 +72,7 @@ body {
     float: right;
 }
 
-Contenue {
+#Contenue {
     background-color: darkcyan;
     color: white;
     margin: 0;
@@ -84,8 +84,20 @@ Contenue {
 #play {
     background-color: orange;
     color: white;
+    display: flex;
 }
 
-#audio {
-    margin: 2% 40% 2% 40%;
+#details {
+    float: left;
 }
+
+#button {
+    float: right;
+}
+
+#slider_container,
+slider_container2 {
+    float: right;
+}
+
+

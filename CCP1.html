@@ -106,6 +106,7 @@
     <div id="recherche1">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="recherche1_1">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="btn-recherche">Search</button>
+        <img id="img_prof">
         <div class="btn-group" id="profile">
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -122,18 +123,47 @@
 
     </div>
 
-    <footer id="play">
-        <div id="titre">
+    <footer class="footer fixed-bottom" id="play">
 
-        </div>
-        <audio controls id="audio">
-            <source src="" id="source">
-        </audio>
-        <div id="fav">
-
+        <div id="details">
+            <div class="now-playing">PLAYING x OF y</div>
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
         </div>
 
-    </footer>
+        <div id="buttons">
+            <div class="prev-track">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+
+        <div id="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100"
+                   value="0" class="seek_slider">
+            <div class="total-duration">00:00</div>
+        </div>
+
+        <div id="slider_container2">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100"
+                   value="99" class="volume_slider">
+            <i class="fa fa-volume-up"></i>
+        </div>
+</div>
+
+<div id="fav">
+
+</div>
+
+</footer>
 </div>
 
 <script src="CCP1.js"></script>
